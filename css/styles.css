@@ -425,7 +425,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-top: 50px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .package-card {
@@ -435,6 +435,9 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .package-card:hover {
@@ -467,6 +470,7 @@ img {
     position: relative;
     height: 200px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .package-card-img img {
@@ -502,6 +506,9 @@ img {
 
 .package-card-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .package-card-content h3 {
